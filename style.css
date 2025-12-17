@@ -1,0 +1,324 @@
+/* Reseta estilos padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis CSS para cores e URLs */
+:root {
+  --text-color: rgb(255, 255, 255);
+  --bg-url: url(./assets/pagina_de_login_academia_mb.png);
+  /* Fundo padrão */
+  --stroke-color: rgba(255, 255, 255, 0.1);
+  --surface-color: rgba(255, 255, 255, 0.425);
+  --surface-color-hover: rgba(0, 0, 0, 0.5);
+  --highlight-color: rgba(255, 255, 255, 0.041);
+}
+
+/* Estilos globais */
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* ======================================================= */
+/* PÁGINA PRINCIPAL (index.html) */
+body.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  font-size: 18px;
+}
+
+body.main-page #container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+  height: auto;
+  display: block;
+}
+
+/* Perfil */
+body.main-page #profile {
+  text-align: center;
+  padding: 24px;
+}
+
+body.main-page #profile img {
+  width: 134.4px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+body.main-page #profile p {
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Botões principais */
+body.main-page ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  --text-color: rgb(0, 0, 0);
+}
+
+body.main-page ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, border-color 0.2s;
+  --text-color: rgb(0, 0, 0);
+}
+
+body.main-page ul li a:hover {
+  background-color: var(--surface-color-hover);
+  border-color: var(--text-color);
+}
+
+/* Botão de alternar */
+.btn-toggle-content {
+  padding: 16px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #F8F8F8;
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  --text-color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+  /* Adicionado margem inferior para separar botões */
+}
+
+.btn-toggle-content:hover {
+  background-color: #E0E0E0;
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Conteúdo oculto */
+.hidden-content {
+  margin-top: 5px;
+  padding: 20px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  background-color: rgba(248, 248, 248, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  max-width: 588px;
+  width: 100%;
+  margin-bottom: 16px;
+  /* Adicionado margem inferior */
+}
+
+.show-content {
+  display: block;
+  opacity: 1;
+}
+
+/* Títulos e parágrafos */
+.hidden-content h4 {
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hidden-content p {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Tabelas */
+.hidden-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+/* Conteúdo das tabelas */
+.hidden-content th,
+.hidden-content td {
+  border: 1px solid transparent;
+  padding: 6px;
+  text-align: left;
+  /* 👉 alinhado à esquerda */
+  color: #333333;
+  font-size: 0.8rem;
+}
+
+.hidden-content td {
+  border: 1px solid transparent;
+  padding: 5px;
+  text-align: left;
+  color: #333333;
+  font-size: 0.8rem;
+}
+
+.done-column {
+  text-align: center;
+}
+
+/* Social */
+body.main-page #social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+body.main-page #social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background-color: transparent;
+  transition: background 0.2s;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+body.main-page #social-links a:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Footer */
+body.main-page footer {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.main-page footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ============================== */
+/* PLAYER DE VÍDEO DOS EXERCÍCIOS */
+/* ============================== */
+.exercise-name {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 6px;
+  text-align: left;
+  /* 👉 alinhado à esquerda */
+  display: block;
+  /* garante quebra de linha completa */
+  width: 100%;
+  /* ocupa a célula inteira */
+}
+
+/* Player escondido por padrão */
+.exercise-video {
+  position: relative;
+  width: 100%;
+  /* 👉 agora ocupa toda a largura */
+  max-width: none;
+  /* 👉 remove limite fixo */
+  aspect-ratio: 16 / 9;
+  /* mantém proporção */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px auto;
+  display: none;
+  /* começa oculto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* 👉 ocupa toda a célula */
+  height: 100%;
+  border: none;
+}
+
+/* Player visível quando ativado */
+.exercise-video.show {
+  display: block;
+  /* 👉 aparece quando ativado */
+}
+
+/* ============================== */
+/* DASHBOARDS E ARQUIVOS          */
+/* ============================== */
+.dashboard-container {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-section {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.file-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.file-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #333;
+  word-break: break-all;
+}
