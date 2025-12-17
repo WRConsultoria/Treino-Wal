@@ -55,7 +55,7 @@ body.main-page #profile {
 }
 
 body.main-page #profile img {
-  width: 134.4px;
+  width: 201.6px;
   height: auto;
   display: block;
   margin: auto;
@@ -321,4 +321,5 @@ body.main-page footer a {
   font-size: 0.9rem;
   color: #333;
   word-break: break-all;
+
 }
