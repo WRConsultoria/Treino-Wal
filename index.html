@@ -12,7 +12,8 @@
   <title>WR Consultoria - Principal</title>
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#000000" />
-  <link rel="apple-touch-icon" href="./assets/logo-wr-consultoria_app.png">
+  <link rel="apple-touch-icon" href="./assets/imagem%20icone1.png">
+  <link rel="icon" type="image/png" href="./assets/imagem%20icone1.png">
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -1105,73 +1106,6 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".checkin").forEach((checkbox, index) => {
-        const key = "checkin_" + index;
-        checkbox.checked = localStorage.getItem(key) === "true";
-        checkbox.addEventListener("change", function () {
-          localStorage.setItem(key, this.checked);
-        });
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LAST_RESET_KEY = "last_checkin_reset_date";
-
-      function resetCheckins() {
-        document.querySelectorAll(".checkin").forEach((checkbox) => {
-          checkbox.checked = false;
-        });
-
-        // Limpa todos os itens de checkin do localStorage
-        for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i);
-          if (key.startsWith("checkin_")) {
-            localStorage.removeItem(key);
-          }
-        }
-        console.log("Check-ins resetados!");
-        // Salva a data do último reset
-        localStorage.setItem(LAST_RESET_KEY, new Date().toISOString().split('T')[0]);
-      }
-
-      function checkAndReset() {
-        const now = new Date();
-        const dayOfWeek = now.getDay(); // Domingo é 0, Sábado é 6
-        const hour = now.getHours();
-
-        const lastResetDate = localStorage.getItem(LAST_RESET_KEY);
-        const today = now.toISOString().split('T')[0]; // Data atual no formato YYYY-MM-DD
-
-        // Verifica se é domingo (0) e a hora é 22 (22h) e se ainda não foi resetado hoje
-        if (dayOfWeek === 0 && hour === 22 && lastResetDate !== today) {
-          resetCheckins();
-        }
-      }
-
-      // Carrega os estados dos check-ins ao carregar a página
-      document.querySelectorAll("table").forEach((table, tIndex) => {
-        table.querySelectorAll(".checkin").forEach((checkbox, iIndex) => {
-          const key = "checkin_" + tIndex + "_" + iIndex;
-          checkbox.checked = localStorage.getItem(key) === "true";
-          checkbox.addEventListener("change", function () {
-            localStorage.setItem(key, this.checked);
-          });
-        });
-      });
-
-      // Executa a verificação e reset ao carregar a página
-      checkAndReset();
-
-      // Opcional: Você pode agendar a verificação para rodar a cada hora, por exemplo,
-      // para garantir que o reset aconteça mesmo se a página estiver aberta antes das 22h.
-      // setInterval(checkAndReset, 3600000); // Roda a cada 1 hora (3.600.000 ms)
-    });
-  </script>
 
   <script src="./script.js"></script>
 </body>
