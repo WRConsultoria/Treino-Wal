@@ -323,3 +323,73 @@ body.main-page footer a {
   word-break: break-all;
 
 }
+
+/* Bioimpedância - Comparação Visual */
+.bio-exames-comparison {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.exame-card {
+  flex: 1;
+  min-width: 250px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.exame-card h5 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.exame-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.dados-principais {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.dados-principais p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dados-principais strong {
+  font-weight: 600;
+}
+
+.valor {
+  color: #4CAF50;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .bio-exames-comparison {
+    flex-direction: column;
+  }
+
+  .exame-card {
+    min-width: 100%;
+  }
+
+  .exame-img {
+    max-height: 250px;
+  }
+}
