@@ -490,3 +490,15 @@ body.main-page footer a {
     opacity: 1;
   }
 }
+
+/* Install button */
+.install-btn {
+  background: linear-gradient(90deg,#3b82f6,#06b6d4);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.install-btn:active { transform: translateY(1px); }

@@ -302,4 +302,28 @@ document.addEventListener("DOMContentLoaded", function () {
       fecharModal();
     }
   });
+  
+  // ========== PWA Install Prompt (beforeinstallprompt) ==========
+  let deferredPrompt = null;
+  const btnInstall = document.getElementById('btnInstall');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-info bar from appearing on mobile
+    e.preventDefault();
+    deferredPrompt = e;
+    if (btnInstall) {
+      btnInstall.style.display = 'inline-block';
+    }
+  });
+
+  if (btnInstall) {
+    btnInstall.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log('User choice on install prompt:', outcome);
+      deferredPrompt = null;
+      btnInstall.style.display = 'none';
+    });
+  }
 });
