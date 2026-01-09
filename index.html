@@ -10,10 +10,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WR Consultoria - Principal</title>
-  <link rel="manifest" href="./manifest.json" />
+  <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#000000" />
-  <link rel="apple-touch-icon" href="./assets/imagem%20icone1.png">
-  <link rel="icon" type="image/png" href="./assets/imagem%20icone1.png">
+  <link rel="apple-touch-icon" href="./assets/imagem_icone1.png">
+  <link rel="icon" type="image/png" href="./assets/imagem_icone1.png">
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -485,7 +485,7 @@
               </tr>
             <tr>
               <td colspan="4">
-                <div class="exercise"><button class="exercise-name" onclick="toggleVideo(this)">Flexão de braços</button>
+                <div class="exercise"><button class="exercise-name" onclick="toggleVideo(this)">Flexão de braços </button>
                   <div class="exercise-video hidden">
                     <iframe src=""
                       allowfullscreen></iframe>
@@ -527,87 +527,40 @@
         </table>
       </div>
 
-      <button class="btn-toggle-content" data-target="bioimpedanciaContent">Bioimpedância</button>
-      <div id="bioimpedanciaContent" class="hidden-content">
-        <h4>Evolução da Composição Corporal</h4>
-        
-        <div class="bio-exames-comparison">
-          <div class="exame-card">
-            <img src="./assets/exames/bioimpedancia 1 outubro 2025.jpg" alt="Bioimpedância Outubro 2025" class="exame-img">
-            <h5>01 de Outubro 2025</h5>
-            <div class="dados-principais">
-              <p><strong>Peso:</strong> <span class="valor">--</span> kg</p>
-              <p><strong>Gordura:</strong> <span class="valor">--</span> %</p>
-              <p><strong>Massa Magra:</strong> <span class="valor">--</span> kg</p>
-              <p><strong>IMC:</strong> <span class="valor">--</span></p>
-            </div>
-          </div>
-
-          <div class="exame-card">
-            <img src="./assets/exames/bioimpedancia 24 novembro 2025.jpg" alt="Bioimpedância Novembro 2025" class="exame-img">
-            <h5>24 de Novembro 2025</h5>
-            <div class="dados-principais">
-              <p><strong>Peso:</strong> <span class="valor">--</span> kg</p>
-              <p><strong>Gordura:</strong> <span class="valor">--</span> %</p>
-              <p><strong>Massa Magra:</strong> <span class="valor">--</span> kg</p>
-              <p><strong>IMC:</strong> <span class="valor">--</span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard-container">
-          <canvas id="bioimpedanciaChart"></canvas>
-        </div>
-
-        <div class="bio-tracking">
-          <h4>Histórico</h4>
-          <table>
-            <thead>
-              <tr>
-                <th style="text-align:center; width:20%;">Data</th>
-                <th style="text-align:center; width:20%;">Peso (kg)</th>
-                <th style="text-align:center; width:20%;">Gordura (%)</th>
-                <th style="text-align:center; width:20%;">Magra (kg)</th>
-                <th style="text-align:center; width:20%;">Gorda (kg)</th>
+ <button class="btn-toggle-content" data-target="Bioimpedancia">Bioimpedancia</button>
+      <div id="Bioimpedancia" class="hidden-content">
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left;"></th>
+              <th style="text-align:left;"></th>
+              <th style="text-align:left;"></th>
+              <th style="text-align:left;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4">
+                <div class="exercise"><button class="exercise-name" onclick="toggleVideo(this)">1 de outubro</button>
+                  <div class="exercise-video hidden">
+                    <iframe src="assets/exames/bioimpedancia 1 outubro 2025.jpg"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </td>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align:center;"><input type="date" class="bio-input" style="width:95%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" min="0" max="100" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-              </tr>
-              <tr>
-                <td style="text-align:center;"><input type="date" class="bio-input" style="width:95%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" min="0" max="100" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-              </tr>
-              <tr>
-                <td style="text-align:center;"><input type="date" class="bio-input" style="width:95%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" min="0" max="100" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-                <td style="text-align:center;"><input type="number" class="bio-input" step="0.1" placeholder="0.0" style="width:90%;"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="file-upload-section">
-          <h4>Arquivos de Bioimpedância</h4>
-          <input type="file" id="bioFileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.txt,.doc,.docx">
-          <div id="bioFileList" class="file-list">
-            <!-- Arquivos listados aparecerão aqui -->
-          </div>
-        </div>
-
-        <div class="bio-stats">
-          <!-- Espaço para estatísticas rápidas se necessário -->
-        </div>
+            <tr>
+              <td colspan="4">
+                <div class="exercise"><button class="exercise-name" onclick="toggleVideo(this)">24 de novembro</button>
+                  <div class="exercise-video hidden">
+                    <iframe src="assets/exames/bioimpedancia 24 novembro 2025.jpg"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <button class="btn-toggle-content" data-target="Dieta">Dieta</button>
