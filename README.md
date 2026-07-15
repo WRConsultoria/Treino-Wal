@@ -1,4 +1,4 @@
 ## Acesse aqui
 
-https://wrconsultoria.github.io/Treino-Pedro-Picoral/
+https://wrconsultoria.github.io/Treino-Wal/
 
